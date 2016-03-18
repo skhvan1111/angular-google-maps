@@ -184,6 +184,8 @@ angular.module('uiGmapgoogle-maps.directives.api.models.child')
               @gObject = new RichMarker @opts
               @gObject.getIcon = @gObject.getContent
               @gObject.setIcon = @gObject.setContent
+            else if @model.Marker
+              @gObject = new @model.Marker @opts
             else
               @gObject = new google.maps.Marker @opts
             _.extend @gObject, model: @model
